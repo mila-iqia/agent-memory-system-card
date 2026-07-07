@@ -20,7 +20,7 @@ Auditors, privacy reviewers, and governance teams should focus on the sections d
 - **Overview** — Provides quick, machine-readable metadata regarding the system's evaluation status, privacy review status, and licensing.
 - **Performance and Evaluation** — Details the empirical evidence supporting the system's claims, including the evaluation setup, datasets used, and specific performance metrics.
 - **Maintenance and Governance** — Outlines audit logging practices, runtime monitoring, user feedback channels, and retention policies.
-- **Privacy, Sovereignty, and Safety** — Provides an extended treatment of compartmentalization boundaries, PII detection, security threat models, and adversarial robustness.
+- **Privacy, Sovereignty, and Safety** — Provides an extended treatment of contextual integrity, PII detection, security threat models, and adversarial robustness.
 
 ### Developers & System Integrators
 
@@ -49,7 +49,7 @@ The overview is the compact, machine-readable metadata block of the memory syste
 | `modalities` | text \| image \| audio \| video \| tool traces \| browser state \| structured data \| other | The data modalities the system can capture, transform, store, internalize, retrieve, or otherwise use. |
 | `supported_interfaces` | API \| SDK \| MCP server \| agent tool \| model adapter \| database backend \| other | The integration surfaces through which agents, models, applications, or users interact with the memory system. |
 | `evaluation_status` | not evaluated \| internally evaluated \| externally evaluated \| benchmarked | The level of evidence available for performance or utility claims. |
-| `privacy_review_status` | not reviewed \| self-assessed \| internally reviewed \| independently reviewed | The level of review available for privacy, user control, compartmentalization, retention, and safety claims. |
+| `privacy_review_status` | not reviewed \| self-assessed \| internally reviewed \| independently reviewed | The level of review available for privacy, user control, contextual integrity, retention, and safety claims. |
 
 ## Main Card
 
@@ -85,7 +85,7 @@ These front matter fields support discovery, filtering, and structured compariso
 - **`modalities`:** The data modalities that the system can capture, transform, store, internalize, retrieve, or otherwise use.
 - **`supported_interfaces`:** The integration surfaces through which agents, models, applications, or users interact with the memory system.
 - **`evaluation_status`:** The level of evidence available for performance or utility claims.
-- **`privacy_review_status`:** The level of review available for privacy, user control, compartmentalization, retention, and safety claims.
+- **`privacy_review_status`:** The level of review available for privacy, user control, contextual integrity, retention, and safety claims.
 
 ### Memory System Details
 
@@ -329,9 +329,9 @@ Suggested framing:
 - **Export or portability:** [Describe whether users can export memory content or metadata.]
 - **User authority:** [Describe whether authenticated user corrections override later agent, tool, or third-party inputs.]
 
-#### Compartmentalization
+#### Contextual Integrity
 
-Compartmentalization upholds contextual integrity: information should flow only in ways appropriate to the context in which it was shared, so that memories do not leak across personas, workspaces, origins, tenants, or other trust domains in ways that would violate contextual norms or user expectations.
+Contextual integrity requires that information flow only in ways appropriate to the context in which it was shared, so that memories do not leak across personas, workspaces, origins, tenants, or other trust domains in ways that would violate contextual norms or user expectations.
 
 - **Context boundaries:** [User \| workspace \| organization \| tenant \| persona \| application \| origin/domain \| session \| task \| document \| sensitivity level \| other]
 - **Boundary enforcement:** [Access control \| namespace isolation \| retrieval filters \| policy engine \| prompt constraints \| encryption keys \| model separation \| unsupported \| other]
@@ -355,13 +355,13 @@ Compartmentalization upholds contextual integrity: information should flow only 
 #### Security and Adversarial Robustness
 
 - **Threat model:** [Prompt injection \| data poisoning \| covert profiling \| cross-origin extraction \| malicious tools \| insider access \| account compromise \| model inversion \| training data extraction \| other]
-- **Adversarial tests:** [Describe tests run against attempts to force retention, bypass deletion, extract compartmentalized data, hide memories, or overwrite user edits.]
+- **Adversarial tests:** [Describe tests run against attempts to force retention, bypass deletion, extract context-restricted data, hide memories, or overwrite user edits.]
 - **Access controls:** [Authentication \| authorization \| tenant isolation \| encryption \| audit logging \| rate limits \| other]
 - **Incident response:** [Describe logging, detection, user notification, rollback, deletion, or remediation procedures.]
 
 #### Privacy Evaluation
 
-- **Privacy benchmarks or audits:** [Transparency tests \| mutation integrity tests \| compartmentalization tests \| retention adherence tests \| adversarial tests \| manual review \| external audit \| none]
+- **Privacy benchmarks or audits:** [Transparency tests \| mutation integrity tests \| contextual integrity tests \| retention adherence tests \| adversarial tests \| manual review \| external audit \| none]
 - **Known privacy risks:** `[More Information Needed]`
 - **Mitigations:** `[More Information Needed]`
 - **Residual risk:** `[More Information Needed]`

@@ -22,7 +22,7 @@ Auditors, privacy reviewers, and governance teams should focus on the sections d
 - **Overview** — Provides quick, machine-readable metadata regarding the system's evaluation status, privacy review status, and licensing.
 - **Performance and Evaluation** — Details the empirical evidence supporting the system's claims, including the evaluation setup, datasets used, and specific performance metrics.
 - **Maintenance and Governance** — Outlines audit logging practices, runtime monitoring, user feedback channels, and retention policies.
-- **Privacy, Sovereignty, and Safety** — Provides an extended treatment of compartmentalization boundaries, PII detection, security threat models, and adversarial robustness.
+- **Privacy, Sovereignty, and Safety** — Provides an extended treatment of contextual integrity, PII detection, security threat models, and adversarial robustness.
 
 ### Developers & System Integrators
 
@@ -244,7 +244,7 @@ Users can list and search all stored entries, and inspection is complete because
 
 Users can edit entries directly or through correction requests, and can delete at the entry, session, entity, or account level. Deletion is hard deletion with tombstones, and backups are purged on a fixed cycle. Memory can be exported in full as JSON, and authenticated user corrections override later agent inputs.
 
-### Compartmentalization
+### Contextual Integrity
 
 MilaMem enforces contextual integrity by ensuring information flows only in ways appropriate to the context in which it was shared. Memory is partitioned into per-user and per-application namespaces, enforced by namespace isolation, access control, and retrieval filters, so that cross-context flows which would violate contextual norms or user expectations are disabled by default and require explicit configuration. Low-trust content from tools or the web is quarantined and cannot write to durable memory without confirmation.
 
@@ -262,7 +262,7 @@ The threat model covers prompt injection, cross-origin extraction, and data pois
 
 ### Privacy Evaluation
 
-Privacy is checked through internal compartmentalization and retention tests, with no external audit. The main known risk is that stored facts can be recombined across the contexts in which they were shared; mitigations are namespace isolation, redaction, and user inspection and deletion. The residual risk is inference of sensitive traits from aggregated benign facts.
+Privacy is checked through internal contextual-integrity and retention tests, with no external audit. The main known risk is that stored facts can be recombined across the contexts in which they were shared; mitigations are namespace isolation, redaction, and user inspection and deletion. The residual risk is inference of sensitive traits from aggregated benign facts.
 
 ## Citation
 
