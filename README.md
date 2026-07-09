@@ -1,23 +1,33 @@
 # Agent Memory Card
 
-A documentation template for **memory systems** used by AI agents and memory-augmented models, plus a fully worked (fictional) example.
+A proposed standard documentation template for **memory systems** used by AI agents and memory-augmented models, plus a fully worked (fictional) example.
 
-A *memory card* is to a memory system what a model card is to a model: a shared, structured document that makes clear what a system remembers, how memory is represented, how information enters and leaves the system, how memory affects behavior, which performance claims are supported, and which operational and privacy risks remain. It is meant to be read and filled out by the people who build, integrate, evaluate, deploy, govern, or are affected by a memory system.
+Inspired by model cards and dataset cards, an *agent memory card* is a shared, structured document for describing a memory system. It makes clear what a system remembers, how memory is represented, how information enters and leaves the system, how memory affects behavior, which performance claims are supported, and which operational and privacy risks remain.
+
+This template is meant for both memory built directly into AI systems and third-party memory systems used by them, including raw-text stores, RAG-style retrieval systems, vector or graph memory, profile stores, latent or parametric memory, multimodal memory, and hybrid architectures. It is meant to be read and filled out by the people who build, integrate, evaluate, deploy, govern, or are affected by a memory system.
+
+We are sharing this repository publicly to get feedback on the format, scope, terminology, and coverage of the proposal before wider adoption.
 
 ## What this repository contains
 
 | File | Description |
 | --- | --- |
-| [`templates/memory-card-template.md`](templates/memory-card-template.md) | The blank memory card template in GitHub Markdown. Copy this to document your own system. |
+| [`templates/memory-card-template.md`](templates/memory-card-template.md) | The blank agent memory card template in GitHub Markdown. Copy this to document your own system. |
 | [`templates/memory-card-template.pdf`](templates/memory-card-template.pdf) | Typeset PDF of the same template. |
-| [`examples/milamem/memory-card.md`](examples/milamem/memory-card.md) | A fully populated example card for *MilaMem*, a **fictional** memory system. |
+| [`examples/milamem/memory-card.md`](examples/milamem/memory-card.md) | A fully populated example agent memory card for *MilaMem*, a **fictional** memory system. |
 | [`examples/milamem/memory-card.pdf`](examples/milamem/memory-card.pdf) | Typeset PDF of the MilaMem example. |
 
 The Markdown and PDF versions of each artifact carry the same content and section structure; use whichever format suits your workflow.
 
-## When to use a memory card
+## Feedback requested
 
-Fill out a memory card whenever you build, ship, or evaluate a component that preserves and reuses information over time — for example a raw-text store, a RAG-style retrieval system, a vector or graph memory, a profile store, a latent or parametric memory, a multimodal memory, or a hybrid architecture. The template is deliberately broad so it can describe any of these without forcing a system into a category it does not implement.
+We are proposing the agent memory card as a standard documentation artifact for AI systems with memory and for third-party memory systems used by them. Feedback is especially useful on missing sections, unclear terminology, adoption barriers, privacy and governance coverage, and examples of real systems this template should handle better.
+
+You can provide feedback by opening an issue on this GitHub repository, commenting on the repository, or filling out this [feedback form](https://example.com/agent-memory-card-feedback).
+
+## When to use an agent memory card
+
+Fill out an agent memory card whenever you build, ship, or evaluate a component that preserves and reuses information over time — for example a raw-text store, a RAG-style retrieval system, a vector or graph memory, a profile store, a latent or parametric memory, a multimodal memory, or a hybrid architecture. The template is deliberately broad so it can describe any of these without forcing a system into a category it does not implement.
 
 ## How to fill out the template
 
