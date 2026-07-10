@@ -12,6 +12,7 @@ A *memory card* is to a memory system what a model card is to a model: a shared,
 | [`templates/memory-card-template.pdf`](templates/memory-card-template.pdf) | Typeset PDF of the same template. |
 | [`examples/milamem/memory-card.md`](examples/milamem/memory-card.md) | A fully populated example card for *MilaMem*, a **fictional** memory system. |
 | [`examples/milamem/memory-card.pdf`](examples/milamem/memory-card.pdf) | Typeset PDF of the MilaMem example. |
+| [`feedback-questionnaire.md`](feedback-questionnaire.md) | Text version of the public feedback questionnaire. |
 
 The Markdown and PDF versions of each artifact carry the same content and section structure; use whichever format suits your workflow.
 
@@ -33,6 +34,10 @@ The template's own **Directory** section is a reader's guide: it points end user
 [`examples/milamem/`](examples/milamem/) shows what a completed card looks like. Every field is filled in, so you can see the expected level of detail and the tone of a good answer for each section.
 
 > **MilaMem is fictional.** It is not a real product, service, or research system. Every value in the example — including the benchmark numbers, URLs, and citation — is invented purely to illustrate how the template is used. Do not cite any of it as a real measurement.
+
+## Feedback
+
+If you browse or use the memory card and have comments — missing fields, unused fields, or anything else — please fill out the short [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdEvPUtNzbIXXzcaWdrYMEkQjq-EaYiKTO_GRiw_4iurGnnEA/viewform). The questions are also listed in [`feedback-questionnaire.md`](feedback-questionnaire.md).
 
 ## License
 
