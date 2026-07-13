@@ -60,9 +60,10 @@ Responses are reviewed by the Mila team.
    - Not sure
 
 8. **How likely are you to recommend using a memory card when working with a memory system?**  
-   Scale 0–10, required (Net Promoter Score).
+   Single choice 0–10, required (Net Promoter Score).
    - 0 = Not at all likely
    - 10 = Extremely likely
+   - Options: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 
    Scoring: promoters 9–10, passives 7–8, detractors 0–6;  
    NPS = % promoters − % detractors.
