@@ -59,15 +59,15 @@ Responses are reviewed by the Mila team.
    - No
    - Not sure
 
-8. **Would you use a memory card when working with a memory system?**  
-   Multiple-choice grid, required.
+8. **How likely are you to recommend using a memory card when working with a memory system?**  
+   Scale 0–10, required (Net Promoter Score).
+   - 0 = Not at all likely
+   - 10 = Extremely likely
 
-   | | Yes | Maybe / Depends | No |
-   | --- | --- | --- | --- |
-   | Fill one out (when developing, auditing, or adopting) | | | |
-   | Read one (when evaluating or designing) | | | |
+   Scoring: promoters 9–10, passives 7–8, detractors 0–6;  
+   NPS = % promoters − % detractors.
 
-   Optional follow-up (paragraph): Why? Any conditions?
+   Optional follow-up (paragraph): What is the main reason for your score?
 
 ## Memory card feedback
 
