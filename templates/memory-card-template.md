@@ -1,8 +1,8 @@
-# Memory System Card
+# Agent Memory System Card (AMS Card)
 
 ## Directory
 
-The Memory System Card is designed to serve multiple stakeholders. Depending on your role, you may want to focus on different sections to find the information most relevant to you.
+The AMS Card is designed to serve multiple stakeholders. Depending on your role, you may want to focus on different sections to find the information most relevant to you.
 
 ### End Users
 
@@ -33,7 +33,7 @@ Developers and engineers integrating or modifying the system should focus on the
 
 ## Overview
 
-The overview is the compact, machine-readable metadata block of the memory system card. It records the identifying, capability, and deployment-relevant attributes that can be expressed as tags or enumerated values, so that systems can be discovered, filtered, and compared at scale without reading prose. The table below lists each field, the values it can take, and a short description.
+The overview is the compact, machine-readable metadata block of the AMS Card. It records the identifying, capability, and deployment-relevant attributes that can be expressed as tags or enumerated values, so that systems can be discovered, filtered, and compared at scale without reading prose. The table below lists each field, the values it can take, and a short description.
 
 | Field | Values | Description |
 | --- | --- | --- |
@@ -55,7 +55,7 @@ The overview is the compact, machine-readable metadata block of the memory syste
 
 The main card is the narrative complement to the overview metadata header. It adds the sections that cannot be inferred from tags alone, covering the system and its intended use, its core memory capabilities and their boundaries, its representational form and architecture, the memory lifecycle of capture, evolution, and retrieval, the performance and efficiency evidence, the limitations and risks, the maintenance and governance posture, and an extended treatment of privacy, sovereignty, and safety, before closing with a citation block and a glossary. Throughout, `[bracketed italic text]` marks a field to be filled in by the author of a specific card, `[More Information Needed]` marks an unknown or not-yet-evaluated field, and `Not Applicable` marks a field that does not apply to a given system design.
 
-### Memory System Card Template for [Memory System Name]
+### AMS Card Template for [Memory System Name]
 
 This template documents a memory system for AI agents, memory-augmented models, or applications that preserve and reuse information over time. It is organized around the system's metadata, intended use, memory capabilities, architecture, lifecycle, performance, limitations, maintenance, and privacy properties.
 
