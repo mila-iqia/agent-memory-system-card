@@ -1,4 +1,4 @@
-# MilaMem Agent Memory Card
+# MilaMem Agent Memory System Card (AMS Card)
 
 MilaMem is a fictional memory system. This card is a fully populated educational example: every field is filled with plausible but invented values to illustrate how the template is used. It documents no real product.
 
