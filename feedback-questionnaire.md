@@ -1,6 +1,6 @@
 # Agent Memory System Card (AMS Card) — Feedback
 
-Thanks for looking at the [Agent Memory System Card (AMS Card)](https://github.com/mila-iqia/agent-memory-card).
+Thanks for looking at the [Agent Memory System Card (AMS Card)](https://github.com/mila-iqia/agent-memory-system-card).
 This short form helps us improve the template.
 Responses are reviewed by the Mila team.
 
