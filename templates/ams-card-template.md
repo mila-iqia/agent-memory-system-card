@@ -33,7 +33,7 @@ Developers and engineers integrating or modifying the system should focus on the
 
 ## Overview
 
-The overview is the compact, machine-readable metadata block of the AMS Card. It records the identifying, capability, and deployment-relevant attributes that can be expressed as tags or enumerated values, so that systems can be discovered, filtered, and compared at scale without reading prose. The table below lists each field, the values it can take, and a short description.
+The overview is the compact, machine-readable metadata block of the AMS Card. It records the identifying, capability, and deployment-relevant attributes that can be expressed as tags or enumerated values, so that memory systems can be discovered, filtered, and compared at scale without reading prose. The table below lists each field, the values it can take, and a short description.
 
 | Field | Values | Description |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ The overview is the compact, machine-readable metadata block of the AMS Card. It
 
 ## Main Card
 
-The main card is the narrative complement to the overview metadata header. It adds the sections that cannot be inferred from tags alone, covering the system and its intended use, its core memory capabilities and their boundaries, its representational form and architecture, the memory lifecycle of capture, evolution, and retrieval, the performance and efficiency evidence, the limitations and risks, the maintenance and governance posture, and an extended treatment of privacy, sovereignty, and safety, before closing with a citation block and a glossary. Throughout, `[bracketed italic text]` marks a field to be filled in by the author of a specific card, `[More Information Needed]` marks an unknown or not-yet-evaluated field, and `Not Applicable` marks a field that does not apply to a given system design.
+The main card is the narrative complement to the overview metadata header. It adds the sections that cannot be inferred from tags alone, covering (a) the memory system and its intended use,  (b) its core memory capabilities and their boundaries, (c) its representational form and architecture, (d) the memory lifecycle of capture, evolution, and retrieval, (e) performance and efficiency evidence, (f) limitations and risks, (g) the maintenance and governance posture, and (h) an extended treatment of privacy, sovereignty, and safety, before closing with (i) a citation block and (j) a glossary. Throughout, `[bracketed italic text]` marks a field to be filled in by the author of a specific card, `[More Information Needed]` marks an unknown or not-yet-evaluated field, and `Not Applicable` marks a field that does not apply to a given memory system design.
 
 ### AMS Card Template for [Memory System Name]
 
@@ -63,7 +63,7 @@ Use `[More Information Needed]` when a field is unknown or not yet evaluated. Us
 
 ### How To Use This Template
 
-Use this template as shared documentation for the people who build, integrate, evaluate, deploy, govern, or are affected by a memory system. It should make clear what the system remembers, how memory is represented, how information enters and leaves the system, how memory affects behavior, which performance claims are supported, and which operational or privacy risks remain.
+Use this template as shared documentation for everyone involved in building, integrating, evaluating, deploying, governing, or interacting with a memory system. It should make clear what the memory system remembers, how memory is represented, how information enters and leaves the system, how memory affects behavior, which performance claims are supported, and which operational or privacy risks remain.
 
 Start with the code-domain sections that describe the system as implemented: metadata, interfaces, memory capabilities, architecture, lifecycle, and dependencies. Then document the evidence around performance, limitations, maintenance, governance, and privacy. If a section does not apply to the system, state why rather than forcing the implementation into a category it does not use.
 

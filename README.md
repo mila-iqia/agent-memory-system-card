@@ -12,10 +12,10 @@ We are sharing this repository publicly to get feedback on the format, scope, te
 
 | File | Description |
 | --- | --- |
-| [`templates/memory-card-template.md`](templates/memory-card-template.md) | The blank AMS Card template in GitHub Markdown. Copy this to document your own system. |
-| [`templates/memory-card-template.pdf`](templates/memory-card-template.pdf) | Typeset PDF of the same template. |
-| [`examples/milamem/memory-card.md`](examples/milamem/memory-card.md) | A fully populated example AMS Card for *MilaMem*, a **fictional** memory system. |
-| [`examples/milamem/memory-card.pdf`](examples/milamem/memory-card.pdf) | Typeset PDF of the MilaMem example. |
+| [`templates/ams-card-template.md`](templates/ams-card-template.md) | The blank AMS Card template in GitHub Markdown. Copy this to document your own system. |
+| [`templates/ams-card-template.pdf`](templates/ams-card-template.pdf) | Typeset PDF of the same template. |
+| [`examples/milamem/ams-card.md`](examples/milamem/ams-card.md) | A fully populated example AMS Card for *MilaMem*, a **fictional** memory system. |
+| [`examples/milamem/ams-card.pdf`](examples/milamem/ams-card.pdf) | Typeset PDF of the MilaMem example. |
 | [`feedback-questionnaire.md`](feedback-questionnaire.md) | Text version of the public feedback questionnaire. |
 
 The Markdown and PDF versions of each artifact carry the same content and section structure; use whichever format suits your workflow.
@@ -32,18 +32,18 @@ Fill out an AMS Card whenever you build, ship, or evaluate a component that pres
 
 ## How to fill out the template
 
-1. Copy [`templates/memory-card-template.md`](templates/memory-card-template.md) into your own project.
+1. Copy [`templates/ams-card-template.md`](templates/ams-card-template.md) into your own project.
 2. Work top to bottom. Start with the sections that describe the system as implemented (metadata, interfaces, memory capabilities, architecture, lifecycle, dependencies), then document the evidence around performance, limitations, maintenance, governance, and privacy.
 3. Replace every `[bracketed italic]` placeholder with your own content.
 4. Use `[More Information Needed]` when a field is unknown or not yet evaluated, and `Not Applicable` when a field genuinely does not apply to your design. Prefer stating why a section does not apply over deleting it.
 
-The template's own **Directory** section is a reader's guide: it points end users, auditors, and developers to the sections most relevant to each of them.
+The template's own **Directory** section is a reader's guide: it points end users, auditors, and developers to the sections most relevant to them.
 
 ## How to read the MilaMem example
 
 [`examples/milamem/`](examples/milamem/) shows what a completed card looks like. Every field is filled in, so you can see the expected level of detail and the tone of a good answer for each section.
 
-> **MilaMem is fictional.** It is not a real product, service, or research system. Every value in the example — including the benchmark numbers, URLs, and citation — is invented purely to illustrate how the template is used. Do not cite any of it as a real measurement.
+> **MilaMem is fictional.** It is not a real product, service, or research system. All values in the example — including the benchmark numbers, URLs, and citation — have been invented solely to illustrate the use of the template. Under no circumstances should you cite them as if they were actual measurements.
 
 ## License
 
