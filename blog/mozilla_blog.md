@@ -12,39 +12,31 @@ That's the work we've been doing with Mila, one of the world's leading AI resear
 
 Model cards helped people understand what a language model was for and how it failed. Dataset cards did the same thing for training data. Memory systems have grown up without an equivalent, even though memory is the piece of an AI agent that decides, quite literally, what the agent knows about you and what it says on your behalf.
 
-The problem is that memory systems are hard to compare. The information that users need to make informed decisions about agent memory is scattered across heterogenous documentation and marketing material (when it's available at all). Every project publishes performance numbers on the axes it does well on. Almost nobody publishes what happens to their system's performance when you turn privacy protections up. That trade-off is where the interesting question lives. The cost of giving users real control. And nobody has been reporting on it.
+The problem is that memory systems are hard to evaluate. The information that users need to make informed decisions about agent memory is scattered across heterogeneous documentation and marketing material, when it is available at all. Performance claims, privacy practices, user controls, and operational limitations are often documented separately, making it hard to understand how a system works and whether it fits a particular use case.
 
 So we're building a card for that.
 
 ## What the card looks like
 
-At the top level, the Agent Memory System Card (AMS Card) is a single sheet. An at-a-glance read of how a memory system treats the dimensions that matter to whoever is choosing it. The dimensions we think matter:
+The Agent Memory System Card (AMS Card) is a long-form, structured documentation template for memory systems. It helps people making decisions about a memory system find answers to the questions that matter: what it remembers and how it works; its intended use and limitations; the evidence for its performance; the controls people have over their data; the privacy and contextual boundaries it enforces; and how it is maintained and governed.
 
-- **Privacy.** How the system treats your data and what leaves the machine you're on.
-- **Performance.** How well it actually remembers.
-- **User control.** Can you inspect what it holds, edit it, delete it?
-- **Compartmentalization.** Does the system honor category boundaries (health separate from work, personal separate from professional)?
-- **Portability.** Can you take your memory with you when you leave?
+The card is designed for builders, integrators, auditors, and people affected by memory-enabled systems. It documents architecture, lifecycle, supporting evidence, operational governance, and privacy controls. Rather than rating systems or calculating a privacy-versus-performance score, it makes the information and evidence relevant to both topics visible for a reader's own evaluation.
 
-How each dimension is expressed on the card, a plain-English rating or a shade or a phrase, is deliberately still in flight. The point of the card isn't the grading system. The point is that these dimensions become legible to someone deciding.
-
-Beneath the single sheet sits the long-form card: how a system actually works, what evidence supports its claims, what the operational trade-offs are, and where the honest edges live. The single sheet is for someone deciding whether a memory system is right for a given use case. The long-form card is for someone doing a thorough evaluation.
-
-For someone deploying an agent as a research assistant, performance may matter more than compartmentalization. For someone handling health information, the balance flips. The AMS Card is a way to make those trade-offs visible in the same format across systems, so choosing intentionally is possible.
+Different readers will focus on different parts of the card. Someone deploying an agent as a research assistant may look closely at performance evidence and capability boundaries. Someone handling health information may focus on privacy controls, retention, and contextual boundaries. The AMS Card gives each of them a common, structured place to find that information.
 
 ## What we're publishing today
 
-- A draft of the AMS Card template on GitHub, with the technical design document, the criteria we're using, and worked examples.
-- A short feedback survey. Ten questions, about five minutes, for anyone who has looked at a memory system in the last twelve months, from any angle.
+- A draft AMS Card template and a completed fictional example card, so people can see what a filled-in card could look like.
+- A short feedback survey, about five minutes, for anyone who has looked at a memory system in the last twelve months, from any angle.
 - A three-week open comment window on the repository. We want to hear where the card is wrong, missing, or too narrow. After three weeks we'll close comments and start iterating on the feedback.
 
-Link to the github repo
+[View the AMS Card repository on GitHub](https://github.com/mila-iqia/agent-memory-system-card)
 
 ## What we're asking for
 
 Three things.
 
-1. **Tell us where we're off.** If you build memory systems, evaluate them, or make product decisions about how memory-enabled AI shows up for real users, we want to know where the AMS Card misses the mark. Take the ten-question survey. It asks what you're using memory for, how you weigh privacy against performance and other criteria, what's missing from the card, which memory systems we should know about, and where we've got a verdict wrong. For anything longer or more specific, open a GitHub issue.
+1. **Tell us where we're off.** If you build memory systems, evaluate them, or make product decisions about how memory-enabled AI shows up for real users, we want to know where the AMS Card misses the mark. Take the short survey. It asks what you're using memory for, how you weigh privacy against performance and other criteria, what's missing from the card, which memory systems we should know about, and where we've got a verdict wrong. For anything longer or more specific, open a GitHub issue.
 2. **Reach out if you're building this.** If you've been quietly working on memory that respects the user, we want to talk. Tick the "direct conversation" box at the end of the survey. The work is more interesting when the people doing it are talking to each other.
 
 We've published a feedback survey so you can tell us what we've missed and where we're wrong.
