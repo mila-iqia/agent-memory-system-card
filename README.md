@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/ams-card-logo.png" alt="AMS Card logo" width="112">
+</p>
+
 <h1 align="center">Agent Memory System Card (AMS Card)</h1>
 
 A proposed standard documentation template for **memory systems** used by AI agents and memory-augmented models, plus a fully worked (fictional) example.
