@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <a href="https://mila.quebec/"><img src="assets/mila-logo-purple.png" alt="Mila" height="100"></a>
 </p>
 
