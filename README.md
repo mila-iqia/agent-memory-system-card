@@ -1,7 +1,3 @@
-<p align="left">
-  <a href="https://mila.quebec/"><img src="assets/mila-logo-purple.png" alt="Mila" height="100"></a>
-</p>
-
 <h1 align="center">Agent Memory System Card (AMS Card)</h1>
 
 A proposed standard documentation template for **memory systems** used by AI agents and memory-augmented models, plus a fully worked (fictional) example.
@@ -52,3 +48,11 @@ The template's own **Directory** section is a reader's guide: it points end user
 ## License
 
 Released under the [MIT License](LICENSE).
+
+## Collaborating organizations
+
+<p align="center">
+  <a href="https://mila.quebec/"><img src="assets/mila-logo-purple.png" alt="Mila" height="72"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.mozilla.org/"><img src="assets/mozilla-logo-black.svg" alt="Mozilla" height="72"></a>
+</p>
