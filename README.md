@@ -1,4 +1,8 @@
-# Agent Memory System Card (AMS Card)
+<p align="left">
+  <a href="https://mila.quebec/"><img src="assets/mila-logo-purple.png" alt="Mila" height="100"></a>
+</p>
+
+<h1 align="center">Agent Memory System Card (AMS Card)</h1>
 
 A proposed standard documentation template for **memory systems** used by AI agents and memory-augmented models, plus a fully worked (fictional) example.
 
