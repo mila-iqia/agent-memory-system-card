@@ -28,7 +28,7 @@ The Markdown and PDF versions of each artifact carry the same content and sectio
 
 We are proposing the AMS Card as a standard documentation artifact for AI systems with memory and for third-party memory systems used by them. Feedback is especially useful on missing sections, unclear terminology, adoption barriers, privacy and governance coverage, and examples of real systems this template should handle better.
 
-You can provide feedback by opening an issue on this GitHub repository, commenting on the repository, or filling out this [feedback form](https://forms.gle/TC8JLYi8YTZrmiDF9). The questions are also listed in [`feedback-questionnaire.md`](feedback-questionnaire.md).
+You can provide feedback by filling out this [feedback form](https://forms.gle/TC8JLYi8YTZrmiDF9) (preferred), or by opening a GitHub issue. The questions are also listed in [`feedback-questionnaire.md`](feedback-questionnaire.md). See [`CONTRIBUTING.md`](CONTRIBUTING.md) for how we take feedback; we are not accepting pull requests from external collaborators at this time.
 
 ## When to use an AMS Card
 
