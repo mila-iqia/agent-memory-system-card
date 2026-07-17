@@ -21,7 +21,7 @@ Tell us briefly about your location, age range, role, and organization.
    Dropdown, required. Canada and the United States appear first, followed by the remaining countries and territories alphabetically. “Prefer not to say” appears last.
 
 2. **Age range**
-   Single choice, required:
+   Single choice, required. Optional to disclose: helps us see whether views on different parts of the AMS Card vary across age groups — privacy among them. Select the range that applies, or choose “Prefer not to say.”
    - Under 18
    - 18–24
    - 25–34
