@@ -1,8 +1,8 @@
-# Memory System Card
+# Agent Memory System Card (AMS Card)
 
 ## Directory
 
-The Memory System Card is designed to serve multiple stakeholders. Depending on your role, you may want to focus on different sections to find the information most relevant to you.
+The AMS Card is designed to serve multiple stakeholders. Depending on your role, you may want to focus on different sections to find the information most relevant to you.
 
 ### End Users
 
@@ -37,7 +37,7 @@ Developers and engineers integrating or modifying the system should focus on the
 
 The main card provides the human-readable description and evidence that cannot be inferred from structured fields alone. It covers the system and its intended use, its core memory capabilities and their boundaries, its representational form and architecture, the memory lifecycle of capture, evolution, and retrieval, the performance and efficiency evidence, the limitations and risks, the maintenance and governance posture, and an extended treatment of privacy, sovereignty, and safety, before closing with a citation block and a glossary. Throughout, `[bracketed italic text]` marks a field to be filled in by the author of a specific card, `[More Information Needed]` marks an unknown or not-yet-evaluated field, and `Not Applicable` marks a field that does not apply to a given memory system design.
 
-### Memory System Card Template for [Memory System Name]
+### AMS Card Template for [Memory System Name]
 
 This template documents a memory system for AI agents, memory-augmented models, or applications that preserve and reuse information over time. It is organized around the system's metadata, intended use, memory capabilities, architecture, lifecycle, performance, limitations, maintenance, and privacy properties.
 
@@ -363,7 +363,7 @@ If this memory system is described in a paper, report, or public artifact, cite 
 
 ## Structured Index Record
 
-The Structured Index Record is the compact, machine-readable part of the memory system card. It records identifying and capability attributes as typed fields and controlled values so that memory systems can be discovered, filtered, and compared without interpreting the narrative. Fields marked “one or more” are controlled multi-select fields rather than single-value classifications. The table below defines each field, its type or allowed values, and its purpose.
+The Structured Index Record is the compact, machine-readable part of the AMS Card. It records identifying and capability attributes as typed fields and controlled values so that memory systems can be discovered, filtered, and compared without interpreting the narrative. Fields marked “one or more” are controlled multi-select fields rather than single-value classifications. The table below defines each field, its type or allowed values, and its purpose.
 
 | Field | Type or allowed values | Description |
 | --- | --- | --- |
