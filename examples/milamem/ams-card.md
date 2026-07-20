@@ -1,4 +1,4 @@
-# MilaMem Agent Memory System Card (AMS Card)
+# MilaMem Memory System Card
 
 MilaMem is a fictional memory system. This card is a fully populated educational example: every field is filled with plausible but invented values to illustrate how the template is used. It documents no real product.
 
@@ -10,6 +10,7 @@ This card is designed to serve multiple stakeholders. Depending on your role, yo
 
 End users should focus on sections that explain what the system remembers, how it impacts their experience, and what control they have over their data.
 
+- **System Overview** — Summarizes the evidence about performance, contextual integrity, user control, portability, and data governance.
 - **Intended Use** — Explains how the memory system is meant to be used directly and outlines any out-of-scope or unsupported uses.
 - **Core Memory Capabilities** — Details the exact types of information the system captures, such as user facts, preferences, or task history.
 - **Limitations and Risks** — Highlights potential behavioral risks you might encounter, such as false memories, stale information, or inappropriate personalization.
@@ -19,54 +20,40 @@ End users should focus on sections that explain what the system remembers, how i
 
 Auditors, privacy reviewers, and governance teams should focus on the sections detailing evidence, compliance metrics, and operational safeguards.
 
-- **Overview** — Provides quick, machine-readable metadata regarding the system's evaluation status, privacy review status, and licensing.
+- **System Overview** — Gives short, evidence-linked answers about performance, contextual integrity, user controls, portability, and data residency.
 - **Performance and Evaluation** — Details the empirical evidence supporting the system's claims, including the evaluation setup, datasets used, and specific performance metrics.
 - **Maintenance and Governance** — Outlines audit logging practices, runtime monitoring, user feedback channels, and retention policies.
 - **Privacy, Sovereignty, and Safety** — Provides an extended treatment of contextual integrity, PII detection, security threat models, and adversarial robustness.
+- **Structured Index Record** — Provides typed and controlled fields for machine indexing and cross-system comparison.
 
 ### Developers & System Integrators
 
 Developers and engineers integrating or modifying the system should focus on the technical architecture, implementation details, and lifecycle mechanics.
 
-- **Overview** — Lists the supported integration interfaces (e.g., APIs, SDKs), supported modalities, and physical memory forms.
+- **Structured Index Record** — Lists supported integration interfaces, modalities, and memory forms using controlled values.
 - **Memory Form and Architecture** — Explains the underlying data representation (such as vector embeddings or graphs), storage locations, and the technical read/write paths.
 - **Memory Lifecycle** — Describes the mechanical processes of how information is captured, consolidated, forgotten, and retrieved by the agent or model.
 - **Model and Dependency Information** — Lists the required base models, embedding models, databases, and external services necessary to run the system.
 
-## Overview
+## System Overview
 
 | Field | Value |
 | --- | --- |
-| memory_system_name | MilaMem |
-| version | v1.2.0 |
-| developers | MilaMem Project (fictional educational example) |
-| release_date | 2026-03-15 |
-| license | Apache-2.0 |
-| homepage | <https://example.org/milamem> |
-| repository | <https://example.org/milamem/repo> |
-| technical_reference | MilaMem technical report (fictional), 2026 |
-| documentation | <https://example.org/milamem/docs> |
-| contact | `contact@example.org` |
-| tags | memory-system; agent-memory; hybrid; vector; graph; open-source |
-| memory_forms | hybrid: raw-text; vector embeddings; entity/relation graph |
-| memory_functions | user facts; preferences; experience traces; working context |
-| modalities | text; structured data |
-| supported_interfaces | API; SDK; MCP server |
-| evaluation_status | internally evaluated (illustrative benchmarks; see Evaluation) |
-| privacy_review_status | self-assessed |
+| System summary | MilaMem is a hybrid long-term memory layer for LLM agents. It extracts salient facts from interactions, stores them as natural-language entries indexed by vector embeddings and an entity/relation graph, and retrieves them through fused semantic, keyword, and graph signals. |
+| Performance evidence | Illustrative internal evaluations report higher accuracy than no-memory and RAG baselines on LoCoMo and LongMemEval, and higher recall@5 on a custom suite. Configurations, seeds, and prompts are described as released, but the fictional system has no external audit; see Performance and Evaluation. |
+| Contextual integrity evidence | Internal contextual-integrity tests attempt retrieval across per-user and per-application namespaces and verify that namespace isolation, access controls, and retrieval filters deny it. There is no external audit; see Privacy Evaluation. |
+| Inspection, editing, and deletion | Users can list, search, and edit every stored entry and delete memories by entry, session, entity, or account. Content is removed immediately from the primary store; content-free tombstones remain for audit, and backups are purged within 30 days. |
+| Memory preferences | Users can define do-not-remember patterns and retention periods, use temporary sessions that never write durable memory, and require confirmation before sensitive information is stored. |
+| Portability | Users can export all memory content, provenance, timestamps, and retention metadata as JSON. |
+| Data governance and residency | Self-hosted deployments let operators choose the physical storage location. Managed deployments let administrators select an available storage region and document the backup location. |
 
-## Memory System Details
+## System and Deployment Details
 
-### System Description
+### Deployment Context
 
 | Field | Value |
 | --- | --- |
-| Summary | A hybrid long-term memory layer for LLM agents that extracts salient facts from interactions, stores them as natural-language entries indexed by vector embeddings and a lightweight entity/relation graph, and retrieves them through fused semantic, keyword, and graph signals. |
-| Developed by | MilaMem Project (fictional) |
 | Shared by | Not Applicable (not redistributed by a separate party) |
-| Version | v1.2.0 |
-| Release date | 2026-03-15 |
-| License | Apache-2.0 |
 | System type | Memory framework with database backend |
 | Deployment mode | Self-hosted library; optional managed cloud service |
 | Primary users | Developers and agent builders |
@@ -216,6 +203,10 @@ Minor releases ship roughly quarterly. The API and storage schema are stable wit
 
 Operators can monitor retrieval quality, latency, write and deletion logs, and privacy events. Read, write, and deletion events are recorded in audit logs accessible to operators only and retained for 90 days. Users can submit corrections, deletion requests, and issue reports.
 
+### Data Governance and Residency
+
+Self-hosted operators choose where the vector database, graph database, backups, and audit logs are physically stored. Administrators of the managed service select from the provider's available storage regions, and the selected primary and backup locations are recorded in deployment metadata.
+
 ### Model and Dependency Information
 
 | Field | Value |
@@ -242,7 +233,7 @@ Users can list and search all stored entries, and inspection is complete because
 
 ### User Control, Editability, and Erasability
 
-Users can edit entries directly or through correction requests, and can delete at the entry, session, entity, or account level. Deletion is hard deletion with tombstones, and backups are purged on a fixed cycle. Memory can be exported in full as JSON, and authenticated user corrections override later agent inputs.
+Users can edit entries directly or through correction requests, and can delete at the entry, session, entity, or account level. Deletion removes content immediately from the primary store while retaining a content-free audit tombstone; backups are purged within 30 days. Memory and its provenance and retention metadata can be exported in full as JSON, and authenticated user corrections override later agent inputs.
 
 ### Contextual Integrity
 
@@ -262,7 +253,7 @@ The threat model covers prompt injection, cross-origin extraction, and data pois
 
 ### Privacy Evaluation
 
-Privacy is checked through internal contextual-integrity and retention tests, with no external audit. The main known risk is that stored facts can be recombined across the contexts in which they were shared; mitigations are namespace isolation, redaction, and user inspection and deletion. The residual risk is inference of sensitive traits from aggregated benign facts.
+Internal contextual-integrity tests attempt retrieval across per-user and per-application namespaces and verify that namespace isolation, access controls, and retrieval filters deny it. Internal retention tests also cover deletion and expiration, but there is no external audit. The main known risk is that stored facts can be recombined across the contexts in which they were shared; mitigations are namespace isolation, redaction, and user inspection and deletion. The residual risk is inference of sensitive traits from aggregated benign facts.
 
 ## Citation
 
@@ -273,3 +264,25 @@ Privacy is checked through internal contextual-integrity and retention tests, wi
 ## More Information
 
 Fictional example; see the (placeholder) documentation at <https://example.org/milamem/docs> for the conventions this card illustrates.
+
+## Structured Index Record
+
+| Field | Value |
+| --- | --- |
+| memory_system_name | MilaMem |
+| version | v1.2.0 |
+| developers | MilaMem Project (fictional educational example) |
+| release_date | 2026-03-15 |
+| license | Apache-2.0 |
+| homepage | <https://example.org/milamem> |
+| repository | <https://example.org/milamem/repo> |
+| technical_reference | MilaMem technical report (fictional), 2026 |
+| documentation | <https://example.org/milamem/docs> |
+| contact | `contact@example.org` |
+| tags | memory-system; agent-memory; hybrid; vector; graph; open-source |
+| memory_forms | raw-text; vector; graph; hybrid |
+| memory_functions | user facts; preferences; experience traces; working context |
+| modalities | text; structured data |
+| supported_interfaces | API; SDK; MCP server |
+| evaluation_status | internally evaluated |
+| privacy_review_status | self-assessed |
