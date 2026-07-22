@@ -51,7 +51,7 @@ The template's own **Directory** section is a reader's guide: it points end user
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](LICENSE). Names, logos, and trademarks remain subject to their owners' policies.
 
 ## Collaborating organizations
 
