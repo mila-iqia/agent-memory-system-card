@@ -1,0 +1,39 @@
+name: Feedback or question
+description: Flag a concrete problem, gap, or question about the AMS Card
+title: "[Feedback]: "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prefer the [feedback form](https://forms.gle/TC8JLYi8YTZrmiDF9) for structured questionnaire answers.
+        Use this issue template for a specific, trackable item in the repository.
+        We are not accepting pull requests from external collaborators at this time.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is this about?
+      options:
+        - Missing or incomplete section
+        - Unclear terminology or wording
+        - Typo, error, or broken link
+        - Adoption or usability barrier
+        - Privacy, safety, or governance coverage
+        - Real-world system the template should handle better
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Where in the docs?
+      description: File and section if relevant (for example `templates/ams-card-template.md` → Memory Lifecycle).
+      placeholder: templates/ams-card-template.md — Directory
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What is wrong, missing, or unclear? What change would help?
+      placeholder: Describe the issue and, if you have one, a suggested fix.
+    validations:
+      required: true
