@@ -8,6 +8,7 @@ The AMS Card is designed to serve multiple stakeholders. Depending on your role,
 
 End users should focus on sections that explain what the system remembers, how it impacts their experience, and what control they have over their data.
 
+- **System Overview** — Summarizes the available evidence about performance, contextual integrity, user control, portability, and data governance.
 - **Intended Use** — Explains how the memory system is meant to be used directly and outlines any out-of-scope or unsupported uses.
 - **Core Memory Capabilities** — Details the exact types of information the system captures, such as user facts, preferences, or task history.
 - **Limitations and Risks** — Highlights potential behavioral risks you might encounter, such as false memories, stale information, or inappropriate personalization.
@@ -17,43 +18,24 @@ End users should focus on sections that explain what the system remembers, how i
 
 Auditors, privacy reviewers, and governance teams should focus on the sections detailing evidence, compliance metrics, and operational safeguards.
 
-- **Overview** — Provides quick, machine-readable metadata regarding the system's evaluation status, privacy review status, and licensing.
+- **System Overview** — Gives short, evidence-linked answers about performance, contextual integrity, user controls, portability, and data residency.
 - **Performance and Evaluation** — Details the empirical evidence supporting the system's claims, including the evaluation setup, datasets used, and specific performance metrics.
 - **Maintenance and Governance** — Outlines audit logging practices, runtime monitoring, user feedback channels, and retention policies.
 - **Privacy, Sovereignty, and Safety** — Provides an extended treatment of contextual integrity, PII detection, security threat models, and adversarial robustness.
+- **Structured Index Record** — Provides typed and controlled fields for machine indexing and cross-system comparison.
 
 ### Developers & System Integrators
 
 Developers and engineers integrating or modifying the system should focus on the technical architecture, implementation details, and lifecycle mechanics.
 
-- **Overview** — Lists the supported integration interfaces (e.g., APIs, SDKs), supported modalities, and physical memory forms.
+- **Structured Index Record** — Lists supported integration interfaces, modalities, and memory forms using controlled values.
 - **Memory Form and Architecture** — Explains the underlying data representation (such as vector embeddings or graphs), storage locations, and the technical read/write paths.
 - **Memory Lifecycle** — Describes the mechanical processes of how information is captured, consolidated, forgotten, and retrieved by the agent or model.
 - **Model and Dependency Information** — Lists the required base models, embedding models, databases, and external services necessary to run the system.
 
-## Overview
-
-The overview is the compact, machine-readable metadata block of the AMS Card. It records the identifying, capability, and deployment-relevant attributes that can be expressed as tags or enumerated values, so that memory systems can be discovered, filtered, and compared at scale without reading prose. The table below lists each field, the values it can take, and a short description.
-
-| Field | Values | Description |
-| --- | --- | --- |
-| `memory_system_name` | Free text | The public name of the memory system, framework, service, adapter, database, or model variant. |
-| `version` | Free text | The exact release, commit, model checkpoint, schema version, service version, or adapter version described by the card. |
-| `developers` | List of names | The people or organizations responsible for developing the memory system. |
-| `release_date` | Date (YYYY-MM-DD) | The date this version was released or made available. |
-| `license` | License identifier or custom license | The software, model, data, or service license that governs use of the system. If licenses differ across components, explain that in the long version. |
-| `homepage`, `repository`, `technical_reference`, `documentation`, `contact` | URLs or contact points | Links or contact points for users who need implementation details, research context, support, or governance information. |
-| `tags` | Free-text labels, e.g. `memory-system`, `agent-memory` | Search and discovery labels. Use tags for memory form, supported modality, benchmark coverage, deployment mode, privacy review status, or intended domain. |
-| `memory_forms` | raw-text \| token-level \| vector \| graph \| key-value \| profile \| latent \| parametric \| hybrid \| other | The physical or computational form that carries memory. |
-| `memory_functions` | user facts \| environment facts \| preferences \| experience traces \| skills \| strategies \| working context \| other | The main roles served by memory. |
-| `modalities` | text \| image \| audio \| video \| tool traces \| browser state \| structured data \| other | The data modalities the system can capture, transform, store, internalize, retrieve, or otherwise use. |
-| `supported_interfaces` | API \| SDK \| MCP server \| agent tool \| model adapter \| database backend \| other | The integration surfaces through which agents, models, applications, or users interact with the memory system. |
-| `evaluation_status` | not evaluated \| internally evaluated \| externally evaluated \| benchmarked | The level of evidence available for performance or utility claims. |
-| `privacy_review_status` | not reviewed \| self-assessed \| internally reviewed \| independently reviewed | The level of review available for privacy, user control, contextual integrity, retention, and safety claims. |
-
 ## Main Card
 
-The main card is the narrative complement to the overview metadata header. It adds the sections that cannot be inferred from tags alone, covering (a) the memory system and its intended use,  (b) its core memory capabilities and their boundaries, (c) its representational form and architecture, (d) the memory lifecycle of capture, evolution, and retrieval, (e) performance and efficiency evidence, (f) limitations and risks, (g) the maintenance and governance posture, and (h) an extended treatment of privacy, sovereignty, and safety, before closing with (i) a citation block and (j) a glossary. Throughout, `[bracketed italic text]` marks a field to be filled in by the author of a specific card, `[More Information Needed]` marks an unknown or not-yet-evaluated field, and `Not Applicable` marks a field that does not apply to a given memory system design.
+The main card provides the human-readable description and evidence that cannot be inferred from structured fields alone. It covers the system and its intended use, its core memory capabilities and their boundaries, its representational form and architecture, the memory lifecycle of capture, evolution, and retrieval, the performance and efficiency evidence, the limitations and risks, the maintenance and governance posture, and an extended treatment of privacy, sovereignty, and safety, before closing with a citation block and a glossary. Throughout, `[bracketed italic text]` marks a field to be filled in by the author of a specific card, `[More Information Needed]` marks an unknown or not-yet-evaluated field, and `Not Applicable` marks a field that does not apply to a given memory system design.
 
 ### AMS Card Template for [Memory System Name]
 
@@ -65,38 +47,27 @@ Use `[More Information Needed]` when a field is unknown or not yet evaluated. Us
 
 Use this template as shared documentation for everyone involved in building, integrating, evaluating, deploying, governing, or interacting with a memory system. It should make clear what the memory system remembers, how memory is represented, how information enters and leaves the system, how memory affects behavior, which performance claims are supported, and which operational or privacy risks remain.
 
-Start with the code-domain sections that describe the system as implemented: metadata, interfaces, memory capabilities, architecture, lifecycle, and dependencies. Then document the evidence around performance, limitations, maintenance, governance, and privacy. If a section does not apply to the system, state why rather than forcing the implementation into a category it does not use.
+Start with the System Overview, using short prose and links or citations to summarize the evidence most relevant to users and reviewers. Then describe the implementation, interfaces, memory capabilities, architecture, lifecycle, and dependencies before documenting performance, limitations, maintenance, governance, and privacy in detail. Complete the Structured Index Record at the end for discovery and comparison. If a section does not apply to the system, state why rather than forcing the implementation into a category it does not use.
 
 Do not assume that every memory system has explicit working memory, experiential memory, retrieval, human-readable storage, external storage, or editability. Describe the actual behavior first, then use the definitions in this template to classify it where useful.
 
-### Metadata Field Definitions
+### System Overview
 
-These front matter fields support discovery, filtering, and structured comparison across memory systems.
+Answer the following questions in short prose. Link to tests, evaluations, audits, product documentation, or other supporting material where available, and distinguish intended behavior from observed evidence. Use `[No public evidence identified]` when a claim cannot be supported from available information.
 
-- **`memory_system_name`:** The public name of the memory system, framework, service, adapter, database, or model variant.
-- **`version`:** The exact release, commit, model checkpoint, schema version, service version, or adapter version described by the card.
-- **`developers`:** The people or organizations responsible for developing the memory system.
-- **`release_date`:** The date this version was released or made available.
-- **`license`:** The software, model, data, or service license that governs use of the system. If licenses differ across components, explain that in the template body.
-- **`homepage`, `repository`, `technical_reference`, `documentation`, `contact`:** Links or contact points for users who need implementation details, research context, support, or governance information.
-- **`tags`:** Search and discovery labels. Use tags for memory form, supported modality, benchmark coverage, deployment mode, privacy review status, or intended domain.
-- **`memory_forms`:** The physical or computational form that carries memory. Examples include raw text, token-level records, vectors, graphs, key-value records, profiles, latent states, parametric updates, and hybrids.
-- **`memory_functions`:** The main roles served by memory. Examples include user facts, environment facts, preferences, experience traces, skills, strategies, working context, personalization, and task continuity.
-- **`modalities`:** The data modalities that the system can capture, transform, store, internalize, retrieve, or otherwise use.
-- **`supported_interfaces`:** The integration surfaces through which agents, models, applications, or users interact with the memory system.
-- **`evaluation_status`:** The level of evidence available for performance or utility claims.
-- **`privacy_review_status`:** The level of review available for privacy, user control, contextual integrity, retention, and safety claims.
+- **System summary:** [What is the system, and what is it designed to remember?]
+- **Performance evidence:** [What evidence shows that the system improves performance for its intended use?]
+- **Contextual integrity evidence:** [What evidence shows that the system prevents information from crossing inappropriate user, application, workspace, tenant, or other operational contexts?]
+- **Inspection, editing, and deletion:** [How can users inspect, edit, and permanently delete memories?]
+- **Memory preferences:** [How can users control what information the system does and does not remember?]
+- **Portability:** [How can users export their memories when switching memory systems?]
+- **Data governance and residency:** [What control do users or administrators have over where memories are physically stored?]
 
-### Memory System Details
+### System and Deployment Details
 
-#### System Description
+#### Deployment Context
 
-- **Summary:** [Briefly describe what the memory system is and what it is designed to help an agent or model remember.]
-- **Developed by:** [Organization or individual]
 - **Shared by:** [Organization or individual, if different]
-- **Version:** [Version identifier]
-- **Release date:** [Date]
-- **License:** [License identifier or custom license]
 - **System type:** [Memory framework \| memory backend \| model adapter \| model fine-tune \| agent scaffold \| database \| browser memory \| on-device memory \| other]
 - **Deployment mode:** [Local \| on-device \| self-hosted \| cloud-hosted \| managed service \| embedded in model weights \| hybrid]
 - **Primary users:** [Developers \| researchers \| end users \| enterprise administrators \| agent builders \| other]
@@ -389,3 +360,23 @@ If this memory system is described in a paper, report, or public artifact, cite 
 ### More Information
 
 [Add links to documentation, evaluations, issue trackers, examples, or contact channels.]
+
+## Structured Index Record
+
+The Structured Index Record is the compact, machine-readable part of the AMS Card. It records identifying and capability attributes as typed fields and controlled values so that memory systems can be discovered, filtered, and compared without interpreting the narrative. Fields marked “one or more” are controlled multi-select fields rather than single-value classifications. The table below defines each field, its type or allowed values, and its purpose.
+
+| Field | Type or allowed values | Description |
+| --- | --- | --- |
+| `memory_system_name` | Short text | The public name of the memory system, framework, service, adapter, database, or model variant. |
+| `version` | Short text | The exact release, commit, model checkpoint, schema version, service version, or adapter version described by the card. |
+| `developers` | List of names | The people or organizations responsible for developing the memory system. |
+| `release_date` | Date (YYYY-MM-DD) | The date this version was released or made available. |
+| `license` | License identifier or custom license | The software, model, data, or service license that governs use of the system. If licenses differ across components, explain that in the long version. |
+| `homepage`, `repository`, `technical_reference`, `documentation`, `contact` | URLs or contact points | Links or contact points for users who need implementation details, research context, support, or governance information. |
+| `tags` | List of normalized labels, e.g. `memory-system`, `agent-memory` | Search and discovery labels. Use lowercase, hyphen-separated labels and normalize equivalent labels to one value rather than embedding descriptions in this field. |
+| `memory_forms` | One or more of: raw-text \| token-level \| vector \| graph \| key-value \| profile \| latent \| parametric \| hybrid \| other | The physical or computational form that carries memory. |
+| `memory_functions` | One or more of: user facts \| environment facts \| preferences \| experience traces \| skills \| strategies \| working context \| other | The main roles served by memory. |
+| `modalities` | One or more of: text \| image \| audio \| video \| tool traces \| browser state \| structured data \| other | The data modalities the system can capture, transform, store, internalize, retrieve, or otherwise use. |
+| `supported_interfaces` | One or more of: API \| SDK \| MCP server \| agent tool \| model adapter \| database backend \| other | The integration surfaces through which agents, models, applications, or users interact with the memory system. |
+| `evaluation_status` | Exactly one of: not evaluated \| internally evaluated \| externally evaluated \| benchmarked | The level of evidence available for performance or utility claims. |
+| `privacy_review_status` | Exactly one of: not reviewed \| self-assessed \| internally reviewed \| independently reviewed | The level of review available for privacy, user control, contextual integrity, retention, and safety claims. |
