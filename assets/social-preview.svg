@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#f7f9fc"/>
+  <rect width="16" height="640" fill="#174ebf"/>
+  <image x="72" y="128" width="384" height="384" xlink:href="ams-card-logo.png"/>
+  <text x="520" y="205" fill="#06255c" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Agent Memory</text>
+  <text x="520" y="290" fill="#06255c" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">System Card</text>
+  <text x="522" y="350" fill="#174ebf" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">AMS Card</text>
+  <text x="522" y="424" fill="#334967" font-family="Arial, Helvetica, sans-serif" font-size="28">A documentation template for</text>
+  <text x="522" y="462" fill="#334967" font-family="Arial, Helvetica, sans-serif" font-size="28">AI systems with memory</text>
+  <line x1="522" y1="508" x2="1188" y2="508" stroke="#b7c4d8" stroke-width="2"/>
+  <text x="522" y="552" fill="#5b6980" font-family="Arial, Helvetica, sans-serif" font-size="22">Architecture &#183; Evaluation &#183; Privacy &#183; Governance</text>
+</svg>
