@@ -60,10 +60,20 @@ Answer the following questions in short prose. Link to tests, evaluations, audit
 - **Contextual integrity evidence:** [What evidence shows that the system prevents information from crossing inappropriate user, application, workspace, tenant, or other operational contexts?]
 - **Inspection, editing, and deletion:** [How can users inspect, edit, and permanently delete memories?]
 - **Memory preferences:** [How can users control what information the system does and does not remember?]
-- **Portability:** [How can users export their memories when switching memory systems?]
+- **Inferred information:** [Does the system infer information about users beyond what they state directly, and how can users see, confirm, or reject those inferences?]
+- **Portability:** [How can users export their memories when switching memory systems, and could another system import the export?]
 - **Data governance and residency:** [What control do users or administrators have over where memories are physically stored?]
 
 ### System and Deployment Details
+
+#### Card Provenance and Attestation
+
+- **Card version:** [Version of this card, tracked separately from the system version]
+- **Card updated:** [YYYY-MM-DD this card was last revised]
+- **Supersedes:** [Prior card version or URL this card replaces, or `None` for a first card]
+- **System version documented:** [The exact system version, commit, checkpoint, or service version this card describes]
+- **Completed by:** [Name or team who filled out this card]
+- **Independent verification:** [Which claims, if any, have been checked by someone other than the author, with links to the audit, evaluation, or report. Use `None` when the card is fully self-attested, and `[More Information Needed]` when verification is planned but not yet done.]
 
 #### Deployment Context
 
@@ -172,7 +182,7 @@ Describe how information moves through the memory system. Use the formation, evo
 - **Update behavior:** [Append-only \| overwrite \| merge \| consolidate \| fine-tune \| adapter update \| cache update \| profile update \| no updates after creation \| other]
 - **Conflict handling:** [Recency \| confidence \| provenance \| user authority \| source authority \| learned resolver \| manual review \| unsupported]
 - **Consolidation:** [Describe whether and how redundant memories are merged, summarized, abstracted, or internalized.]
-- **Forgetting or pruning:** [Manual deletion \| time-based expiration \| low-access pruning \| low-utility pruning \| capacity-based eviction \| model unlearning \| unsupported \| other]
+- **Forgetting or pruning:** [Manual deletion \| time-based expiration \| gradual decay or downweighting \| low-access pruning \| low-utility pruning \| capacity-based eviction \| model unlearning \| unsupported \| other]
 - **Versioning:** [Describe whether memory state, model weights, profiles, or entries are versioned.]
 
 #### Access, Retrieval, or Use
@@ -297,8 +307,18 @@ Suggested framing:
 - **Edit support:** [Direct edit \| correction request \| profile edit \| entry overwrite \| model update \| unsupported \| other]
 - **Deletion support:** [Entry deletion \| session deletion \| entity deletion \| provenance deletion \| account deletion \| cache clearing \| vector deletion \| graph deletion \| unlearning \| unsupported]
 - **Deletion guarantees:** [Hard deletion \| tombstone \| soft deletion \| removal from retrieval only \| best-effort unlearning \| retention in logs/backups \| unsupported]
-- **Export or portability:** [Describe whether users can export memory content or metadata.]
+- **Export or portability:** [Describe whether users can export memory content and metadata, in what format, and whether the export is documented well enough for another system to import it. Note whether provenance, timestamps, and validation status are included in the export.]
 - **User authority:** [Describe whether authenticated user corrections override later agent, tool, or third-party inputs.]
+
+#### Inferred Memory and User Validation
+
+Systems that infer information about people, rather than only recording what they state, should document how inferences are labeled, qualified, and corrected over time.
+
+- **Stated versus inferred:** [Describe whether memories the system derives on its own are distinguished from information the user stated directly, both in storage and when retrieved.]
+- **Confidence:** [Describe whether inferred memories carry a confidence level, and whether it is visible to users and to the consuming agent or model.]
+- **Validation support:** [Confirm \| reject \| refine \| annotate \| unsupported]
+- **Rejection persistence:** [Describe whether a rejected inference stays rejected, or whether the system can re-derive it later from the same or similar signals.]
+- **Correction propagation:** [Describe whether a user correction also updates the memories and inferences that were derived from the corrected entry.]
 
 #### Contextual Integrity
 
@@ -308,6 +328,17 @@ Contextual integrity requires that information flow only in ways appropriate to 
 - **Boundary enforcement:** [Access control \| namespace isolation \| retrieval filters \| policy engine \| prompt constraints \| encryption keys \| model separation \| unsupported \| other]
 - **Cross-context sharing:** [Describe which information flows across contexts are appropriate, and under what conditions, consistent with contextual information norms and user expectations.]
 - **Low-trust content handling:** [Describe how the system prevents web pages, documents, tool outputs, or other low-trust sources from inducing information flows that violate contextual norms or extract out-of-scope memories.]
+
+#### Memory Visibility and Third-Party Access
+
+Beyond context boundaries within the system, describe which parties outside the end user can read memory content or metadata in normal operation.
+
+- **Parties with access:** [End user only \| operator or administrator \| developer \| model provider \| connected applications \| plugins or tools \| analytics or monitoring services \| human reviewers \| other]
+- **How access is granted:** [User consent \| OAuth or scoped tokens \| API keys \| administrator configuration \| service agreement \| not granted \| other]
+- **Scope of access:** [Full memory \| selected categories \| by sensitivity level \| by purpose \| query results only \| metadata only \| aggregated or anonymized \| none]
+- **Visibility and revocation:** [Describe whether users can see which parties currently have access, whether they can revoke it, and what happens to content already shared.]
+- **Content sent to external services:** [Describe what memory content or metadata flows to model APIs, embedding services, analytics, monitoring, or backups as part of normal operation.]
+- **Secondary use:** [Describe whether memory content, or data derived from it, is used for model training, advertising, analytics products, or aggregate insights, and whether users can opt out.]
 
 #### Retention Policy Adherence
 
@@ -371,6 +402,10 @@ The Structured Index Record is the compact, machine-readable part of the AMS Car
 | `version` | Short text | The exact release, commit, model checkpoint, schema version, service version, or adapter version described by the card. |
 | `developers` | List of names | The people or organizations responsible for developing the memory system. |
 | `release_date` | Date (YYYY-MM-DD) | The date this version was released or made available. |
+| `card_version` | Short text | The version of this card, tracked separately from the system `version` above. |
+| `card_updated` | Date (YYYY-MM-DD) | The date this card was last revised. |
+| `supersedes` | Short text or URL | The prior card version this card replaces, if any; `none` for a first card. |
+| `attested_by` | Short text | Who completed the card and their relationship to the system, e.g. `first-party`, `integrator`, `independent-auditor`. |
 | `license` | License identifier or custom license | The software, model, data, or service license that governs use of the system. If licenses differ across components, explain that in the long version. |
 | `homepage`, `repository`, `technical_reference`, `documentation`, `contact` | URLs or contact points | Links or contact points for users who need implementation details, research context, support, or governance information. |
 | `tags` | List of normalized labels, e.g. `memory-system`, `agent-memory` | Search and discovery labels. Use lowercase, hyphen-separated labels and normalize equivalent labels to one value rather than embedding descriptions in this field. |
@@ -380,3 +415,13 @@ The Structured Index Record is the compact, machine-readable part of the AMS Car
 | `supported_interfaces` | One or more of: API \| SDK \| MCP server \| agent tool \| model adapter \| database backend \| other | The integration surfaces through which agents, models, applications, or users interact with the memory system. |
 | `evaluation_status` | Exactly one of: not evaluated \| internally evaluated \| externally evaluated \| benchmarked | The level of evidence available for performance or utility claims. |
 | `privacy_review_status` | Exactly one of: not reviewed \| self-assessed \| internally reviewed \| independently reviewed | The level of review available for privacy, user control, contextual integrity, retention, and safety claims. |
+| `deletion_guarantee` | Exactly one of: hard-deletion \| crypto-erasure \| tombstone \| soft-deletion \| removal-from-retrieval-only \| best-effort-unlearning \| none \| not-applicable | The strongest deletion guarantee offered when a user or administrator deletes memory. |
+| `default_retention` | Short text | The default retention period or policy before memory expires or is reviewed; `none` when memory persists until deletion. |
+| `retention_control` | One or more of: user-defined \| admin-defined \| environment-defined \| fixed-default \| unsupported | Who can set or change retention. |
+| `context_boundaries` | One or more of: user \| workspace \| organization \| tenant \| persona \| application \| origin \| session \| task \| sensitivity-level \| none | The trust boundaries across which memory is isolated by default. |
+| `third_party_access` | One or more of: none \| operator \| model-provider \| connected-apps \| plugins \| analytics \| human-review \| other | The parties beyond the end user who can read memory content or metadata in normal operation. |
+| `inferred_memory` | Exactly one of: none \| stored-unlabeled \| labeled \| labeled-with-confidence | Whether the system stores inferences about people, and whether inferences are distinguished from stated information. |
+| `user_validation` | One or more of: confirm \| reject \| refine \| rejection-persists \| correction-propagates \| unsupported | The ways users can validate or correct what the system believes about them. |
+| `secondary_use` | One or more of: none \| model-training \| advertising \| aggregate-analytics \| resale \| other | Uses of memory content or derived data beyond serving the user it concerns. |
+| `export_format` | Short text | The export format and schema offered for portability, with a link where documented; `none` when export is unsupported. |
+| `pii_handling` | One or more of: block \| redact \| mask \| hash \| encrypt \| ask-user \| store-as-is \| unsupported | Default handling of detected sensitive information before storage. |
