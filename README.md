@@ -14,7 +14,7 @@ We are sharing this repository publicly to get feedback on the format, scope, te
 
 ## What is an AMS Card? (1-minute explainer)
 
-https://github.com/user-attachments/assets/3e1c522e-db8e-4337-b59d-7ce28616b452
+https://github.com/user-attachments/assets/2fa16d5d-6500-4e62-ac56-48f03074a055
 
 *A one-minute captioned overview (no audio): why deployed agent memory needs its own documentation, what an agent memory system is, and what the AMS Card asks you to write down.*
 
