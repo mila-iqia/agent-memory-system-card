@@ -12,6 +12,12 @@ This template is meant for both memory built directly into AI systems and third-
 
 We are sharing this repository publicly to get feedback on the format, scope, terminology, and coverage of the proposal before wider adoption.
 
+## What is an AMS Card? (1-minute explainer)
+
+https://github.com/user-attachments/assets/3e1c522e-db8e-4337-b59d-7ce28616b452
+
+*A one-minute captioned overview (no audio): why deployed agent memory needs its own documentation, what an agent memory system is, and what the AMS Card asks you to write down.*
+
 ## What this repository contains
 
 | File | Description |
