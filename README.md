@@ -12,6 +12,8 @@ This template is meant for both memory built directly into AI systems and third-
 
 We are sharing this repository publicly to get feedback on the format, scope, terminology, and coverage of the proposal before wider adoption.
 
+📄 **Paper:** [*Agent Memory Systems Are Distinct Privacy Surfaces and Need Their Own Disclosure Cards*](paper/agent-memory-systems-privacy-surfaces.pdf) (preprint, PDF). See [How to cite](#how-to-cite).
+
 ## What is an AMS Card? (1-minute explainer)
 
 https://github.com/user-attachments/assets/2fa16d5d-6500-4e62-ac56-48f03074a055
@@ -27,6 +29,7 @@ https://github.com/user-attachments/assets/2fa16d5d-6500-4e62-ac56-48f03074a055
 | [`examples/milamem/mila_mem_card.md`](examples/milamem/mila_mem_card.md) | A populated AMS Card for *MilaMem*, an experimental research prototype. |
 | [`examples/MozMem/MozMem Template.md`](examples/MozMem/MozMem%20Template.md) | A populated AMS Card for *MozMem*, a proposed user-sovereign memory system that does not exist yet. |
 | [`feedback-questionnaire.md`](feedback-questionnaire.md) | Text version of the public feedback questionnaire. |
+| [`paper/agent-memory-systems-privacy-surfaces.pdf`](paper/agent-memory-systems-privacy-surfaces.pdf) | Preprint of the paper that motivates the AMS Card and fills it for two systems (Meta's Muse and Mem0). |
 
 ## Feedback requested
 
@@ -52,6 +55,22 @@ The template's own **Directory** section is a reader's guide: it points end user
 [`examples/milamem/mila_mem_card.md`](examples/milamem/mila_mem_card.md) shows a completed card for a current research prototype, including preliminary evaluation numbers. [`examples/MozMem/MozMem Template.md`](examples/MozMem/MozMem%20Template.md) shows a completed card used as a design reference for a system that has not been built.
 
 Treat MilaMem results as prototype evidence, not production claims. Treat MozMem as a specification, not a shipped product.
+
+## How to cite
+
+If you use the AMS Card or refer to this work, please cite the paper:
+
+> Jacob Lavoie, Maryam Molamohammadi, Jordan Bannister, Chirag Goel, Amirhossein Naghshzan, Matthew Harris, Arsene Fansi Tchango, and Gaétan Marceau Caron. 2026. *Agent Memory Systems Are Distinct Privacy Surfaces and Need Their Own Disclosure Cards*. Preprint. https://github.com/mila-iqia/agent-memory-system-card
+
+```bibtex
+@misc{lavoie2026amscard,
+  title        = {Agent Memory Systems Are Distinct Privacy Surfaces and Need Their Own Disclosure Cards},
+  author       = {Lavoie, Jacob and Molamohammadi, Maryam and Bannister, Jordan and Goel, Chirag and Naghshzan, Amirhossein and Harris, Matthew and Fansi Tchango, Arsene and Marceau Caron, Ga{\'e}tan},
+  year         = {2026},
+  note         = {Preprint},
+  howpublished = {\url{https://github.com/mila-iqia/agent-memory-system-card}}
+}
+```
 
 ## License
 
